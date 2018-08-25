@@ -1,0 +1,104 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/card_grid_margin"
+        android:elevation="3dp"
+        card_view:cardCornerRadius="@dimen/card_grid_album_radius">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/preview_foto"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/card_grid_cover_height"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/txt_titulo"
+                style="@style/autoscroll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/preview_foto"
+                android:layout_marginRight="40dp"
+                android:ellipsize="middle"
+                android:paddingLeft="@dimen/card_grid_title_padding"
+                android:paddingRight="@dimen/card_grid_title_padding"
+                android:paddingTop="@dimen/card_grid_title_padding"
+                android:textColor="@color/card_grid_title"
+                android:textSize="@dimen/card_grid_title" />
+
+            <TextView
+                android:id="@+id/txt_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_titulo"
+                android:paddingBottom="@dimen/card_grid_count_padding_bottom"
+                android:paddingLeft="@dimen/title_padding"
+                android:paddingRight="@dimen/title_padding"
+                android:textSize="@dimen/card_grid_count" />
+
+            <TextView
+                android:id="@+id/txt_paginas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_data"
+                android:paddingBottom="@dimen/card_grid_count_padding_bottom"
+                android:paddingLeft="@dimen/title_padding"
+                android:paddingRight="@dimen/title_padding"
+                android:textSize="@dimen/card_grid_count" />
+
+            <TextView
+                android:id="@+id/txt_tamanho"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/txt_data"
+                android:paddingBottom="@dimen/card_grid_count_padding_bottom"
+                android:paddingLeft="@dimen/title_padding"
+                android:paddingRight="@dimen/title_padding"
+                android:textSize="@dimen/card_grid_count" />
+
+            <ImageView
+                android:id="@+id/ic_context"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/preview_foto"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/ic_context"
+                android:clickable="true"
+                android:padding="8dp" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout><!--<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"--><!--xmlns:card_view="http://schemas.android.com/apk/res-auto"--><!--android:id="@+id/card_view"--><!--android:layout_width="175dp"--><!--android:layout_height="wrap_content"--><!--android:layout_marginBottom="16dp"--><!--android:layout_marginRight="8dp"--><!--card_view:cardCornerRadius="8dp"--><!--card_view:cardElevation="8dp"--><!--card_view:cardUseCompatPadding="true">-->
+
+    <!--<RelativeLayout--><!--android:layout_width="match_parent"--><!--android:layout_height="match_parent">-->
+
+    <!--<ImageView--><!--android:id="@+id/preview_foto"--><!--android:layout_width="100dp"--><!--android:layout_height="100dp"--><!--android:layout_centerHorizontal="true"--><!--android:adjustViewBounds="true"--><!--android:contentDescription="file"--><!--android:scaleType="centerCrop"--><!--android:src="@drawable/ic_check" />-->
+
+    <!--<TextView--><!--android:id="@+id/txt_titulo"--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content"--><!--android:layout_below="@+id/preview_foto"--><!--android:ellipsize="middle"--><!--style="@style/autoscroll"--><!--android:gravity="center"--><!--android:paddingBottom="8dp"--><!--android:paddingTop="8dp"--><!--android:text="TESTE"--><!--android:textSize="13sp" />-->
+
+    <!--<TextView--><!--android:id="@+id/txt_data"--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content"--><!--android:layout_below="@+id/txt_titulo"--><!--android:ellipsize="middle"--><!--android:gravity="center"--><!--android:paddingBottom="8dp"--><!--android:paddingTop="8dp"--><!--android:text="TESTE"--><!--android:textSize="13sp" />-->
+
+    <!--<TextView--><!--android:id="@+id/pg"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_alignParentStart="true"--><!--android:layout_alignTop="@+id/txt_paginas"--><!--android:gravity="center"--><!--android:paddingBottom="8dp"--><!--android:paddingTop="8dp"--><!--android:text="Páginas:"--><!--android:textSize="13sp" />-->
+
+    <!--<TextView--><!--android:id="@+id/txt_paginas"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_alignParentEnd="true"--><!--android:layout_below="@+id/txt_data"--><!--android:layout_marginEnd="8dp"--><!--android:gravity="right|end"--><!--android:paddingBottom="8dp"--><!--android:paddingTop="8dp"--><!--android:text="0"--><!--android:textSize="13sp" />-->
+
+
+    <!--</RelativeLayout>-->
+
+    <!--</android.support.v7.widget.CardView>-->

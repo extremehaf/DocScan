@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_search"
+        android:title="Search"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        app:showAsAction="always|collapseActionView" />
+    <item
+        android:id="@+id/menuLista"
+        android:icon="@drawable/ic_grid"
+        android:orderInCategory="99"
+        android:title="Visualizar como Grid"
+        app:showAsAction="always">
+
+    </item>
+
+    <item
+        android:id="@+id/empty"
+        android:icon="@drawable/ic_action_overflow"
+        android:orderInCategory="101"
+        android:title="@string/options"
+        app:showAsAction="always">
+
+        <menu>
+
+            <item
+                android:id="@+id/menuOrderData"
+                android:icon="@drawable/ic_data_order"
+                android:title="@string/menu_order_data"
+                app:showAsAction="ifRoom" />
+
+            <item
+                android:id="@+id/menuOrderNome"
+                android:icon="@drawable/ic_az_order"
+                android:title="@string/menu_order_nome"
+                app:showAsAction="ifRoom" />
+
+        </menu>
+
+    </item>
+
+
+</menu>

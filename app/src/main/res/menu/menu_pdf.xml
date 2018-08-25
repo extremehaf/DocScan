@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_visualizar"
+        android:icon="@drawable/ic_pdf"
+        android:title="Visualizar" />
+    <item
+        android:id="@+id/menu_baixar"
+        android:icon="@drawable/ic_download"
+        android:title="Baixar" />
+</menu>

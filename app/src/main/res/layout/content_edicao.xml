@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
+    android:elevation="@dimen/cardview_default_elevation"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".EdicaoActivity"
+    tools:showIn="@layout/activity_edicao">
+
+
+    <FrameLayout
+        android:id="@+id/menuTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cardview_light_background"
+        android:elevation="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:id="@+id/menuTopIcons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <Button
+                    android:id="@+id/btnSair"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/ic_close"
+                    android:padding="@dimen/image_button_padding" />
+
+                <ImageButton
+                    android:id="@+id/btnPdf"
+                    style="@android:style/Widget.Material.Light.Button.Borderless"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical|end"
+                    android:background="@drawable/ic_pdf"
+                    android:contentDescription="@string/description_info"
+                    android:padding="@dimen/image_button_padding" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/tituloFrame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/cardview_light_background"
+                android:paddingBottom="10dp"
+                android:paddingEnd="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingStart="10dp"
+                android:paddingTop="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/menuTopIcons">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/titulo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal|center"
+                        android:text="Documento 01"
+                        app:layout_constraintEnd_toStartOf="@+id/btnEditar" />
+
+                    <Button
+                        android:id="@+id/btnEditar"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/ic_edit"
+                        android:padding="@dimen/image_button_padding"
+
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:id="@+id/edit_titulo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toStartOf="@+id/cancelarEdicao" />
+
+                    <Button
+                        android:id="@+id/cancelarEdicao"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical|center"
+                        android:background="@drawable/ic_close"
+                        android:padding="@dimen/image_button_padding"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+            </FrameLayout>
+        </android.support.constraint.ConstraintLayout>
+
+    </FrameLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:scrollbars="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/txtPagina"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menuTop">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/txtPagina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Pagina 1/2"
+        app:layout_constraintBottom_toTopOf="@+id/menuBot"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/menuBot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cardview_light_background"
+        android:elevation="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/imgCrop"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="10dp"
+            android:background="@drawable/ic_crop" />
+
+        <ImageView
+            android:id="@+id/imgEfeitos"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ic_filtro"></ImageView>
+
+        <ImageView
+            android:id="@+id/deletarPg"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="90dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ic_delete" />
+
+
+    </FrameLayout>
+
+</android.support.constraint.ConstraintLayout>
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/darker_gray"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context=".EdicaoActivity"
+        tools:showIn="@layout/activity_edicao">
+
+
+
+        <RelativeLayout
+            android:id="@+id/relativelayout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal">
+
+            <FrameLayout
+                android:id="@+id/controlTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:background="@android:color/background_light">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center">
+
+                    <Button
+                        android:id="@+id/btnSair"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="start"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/ic_close"
+                        android:padding="@dimen/image_button_padding"
+                        app:layout_constraintLeft_toLeftOf="parent" />
+
+                    <ImageButton
+                        android:id="@+id/btnPdf"
+                        style="@android:style/Widget.Material.Light.Button.Borderless"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_vertical|end"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/ic_pdf"
+                        android:contentDescription="@string/description_info"
+                        android:padding="@dimen/image_button_padding"
+                        app:layout_constraintRight_toRightOf="parent" />
+
+                    <TextView
+                        android:id="@+id/titulo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal|center"
+                        android:text="Documento 01"
+                        app:layout_constraintTop_toBottomOf="@id/btnPdf" />
+
+                    <Button
+                        android:id="@+id/btnEditar"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="start"
+                        android:layout_marginLeft="92dp"
+                        android:background="@drawable/ic_edit"
+                        android:padding="@dimen/image_button_padding"
+                        app:layout_constraintRight_toRightOf="@id/titulo"
+                        app:layout_constraintTop_toBottomOf="@id/btnPdf" />
+
+                    <EditText
+                        android:id="@+id/edit_titulo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        app:layout_constraintTop_toBottomOf="@id/btnPdf" />
+
+                    <Button
+                        android:id="@+id/cancelarEdicao"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="start"
+                        android:layout_marginLeft="92dp"
+                        android:background="@drawable/ic_close"
+                        android:padding="@dimen/image_button_padding"
+                        android:visibility="gone"
+                        app:layout_constraintRight_toRightOf="@id/titulo"
+                        app:layout_constraintTop_toBottomOf="@id/btnPdf" />
+
+                </android.support.constraint.ConstraintLayout>
+
+            </FrameLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerview1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_below="@+id/controlTop"
+                android:scrollbars="horizontal">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/txtPagina"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/recyclerview1"
+                android:layout_centerHorizontal="true"
+                android:text="Pagina 1/2" />
+
+            <FrameLayout
+                android:id="@+id/control"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/frame_height"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@android:color/background_light">
+
+                <ImageView
+                    android:id="@+id/imagePreview"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/ic_crop" />
+
+            </FrameLayout>
+        </RelativeLayout>
+    </android.support.constraint.ConstraintLayout>-->

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="frame_height">60dp</dimen>
+    <dimen name="image_button_padding">20dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="card_grid_margin">5dp</dimen>
+    <dimen name="card_grid_album_radius">0dp</dimen>
+    <dimen name="card_grid_cover_height">160dp</dimen>
+    <dimen name="card_grid_title_padding">10dp</dimen>
+    <dimen name="card_grid_title">15sp</dimen>
+    <dimen name="title_padding">10dp</dimen>
+    <dimen name="title">15dp</dimen>
+    <dimen name="card_grid_count_padding_bottom">5dp</dimen>
+    <dimen name="card_grid_count">12sp</dimen>
+    <dimen name="ic_album_overflow_width">20dp</dimen>
+    <dimen name="ic_album_overflow_height">30dp</dimen>
+    <dimen name="ic_album_overflow_margin_top">10dp</dimen>
+
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#03a9f4</color>
+    <color name="colorPrimaryDark">#0288d1</color>
+    <color name="colorAccent">#448aff</color>
+    <color name="black_overlay">#000000</color>
+    <color name="control_background">#cc4285f4</color>
+    <color name="white">#FFF</color>
+    <color name="blue">#ff59a9ff</color>
+    <color name="orange">#ffff900d</color>
+    <color name="viewBg">#f1f5f8</color>
+    <color name="card_grid_title">#4c4c4c</color>
+    <color name="text_color_primary">#212121</color>
+    <color name="text_color_secondary">#757575</color>
+
+</resources>
