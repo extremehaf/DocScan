@@ -1,0 +1,13 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.camera.crop">
+
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+
+    <application>
+        <activity
+            android:name="com.android.camera.crop.CropActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/crop_action"
+            android:theme="@style/Theme.Crop"></activity>
+    </application>
+</manifest>
